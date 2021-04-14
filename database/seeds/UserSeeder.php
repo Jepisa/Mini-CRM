@@ -13,7 +13,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         factory(App\User::class)->create([
-            'name' => 'admin@admin.com',
+            'name' => 'Daniel Francesh',
+            'email' => 'admin@admin.com',
             'role_id' => Role::firstWhere('name', 'Admin')->id,
             //por default la contraseña es "password"
         ]);

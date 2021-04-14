@@ -10,6 +10,6 @@ class Employee extends Model
 
     public function company()
     {
-        return $this->belongsTo('App\Company', 'company', 'id');
+        return $this->belongsTo('App\Company');
     }
 }

@@ -67,6 +67,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 Usados
     php artisan make:model *** -mr (Para cada modelo)
     
-    composer require laravel/ui
+    composer require laravel/ui "^2.0" //la versión "^3.0" tiene problemas
+    php artisan ui bootstrap --auth
+    npm install
+    npm run dev
+
+    php artisan storage:link
 
 Que tiene que usar

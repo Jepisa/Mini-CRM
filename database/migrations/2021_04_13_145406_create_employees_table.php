@@ -17,9 +17,10 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('name');//obli
             $table->string('lastname');//obli
-            $table->foreignId('company')->constrained('companies')->onDelete('cascade');//obli
-            $table->string('mail');//Parece que no son obligatorios
-            $table->string('phone');//Parece que no son obligatorios
+            $table->string('slug');
+            $table->foreignId('company_id')->constrained('companies')->onDelete('cascade');//obli
+            $table->string('email')->nullable();//Parece que no son obligatorios
+            $table->string('phone')->nullable();//Parece que no son obligatorios
             $table->timestamps();
         });
     }
