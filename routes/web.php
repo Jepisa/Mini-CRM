@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,8 @@ Route::middleware(['auth'])->group(function () {
 
 Route::post('languageEs', 'LanguageController@es')->name('languageEs');
 Route::post('languageEn', 'LanguageController@en')->name('languageEn');
+
+Route::get('/storage-link', function () {
+    Artisan::call('storage:link');
+    redirect('/');
+});
